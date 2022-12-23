@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="start-button">Je suis le contenu du bouton</button>
+    <!-- ou -->
+    <div>
+        <p>
+            Je suis un paragraphe contenu dans une div
+            <span>
+                et avec un span à l'intérieur
+            </span>
+        </p>
+    </div>
+    <input type="text"/>
+    <input type="radio"/>
+    <input type="checkbox"/>
+    <textarea></textarea>
+    <script type="text/javascript">
+
+function onStartButtonClicked(ev) {
+    ev.target.style.backgroundColor = "red";
+}
+
+
+const startButton = document.querySelector("#start-button");
+startButton.addEventListener("click", onStartButtonClicked);
+    </script>
+</body>
+</html>

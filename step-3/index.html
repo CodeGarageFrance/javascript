@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset='utf-8'>
+    <title>Mon premier script</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Variables
+        const productName = "Le produit magique";
+        const productPrice = 16.66;
+        const shipping = 3.33;
+        const taxPercentage = 20;
+        const productAvailability = false;
+        const availableMoney = 50;
+
+        // Calculs
+        const finalPrice = productPrice + shipping;
+        const totalTax = (finalPrice / 100) * taxPercentage;
+        const totalPrice = finalPrice + totalTax;
+
+        // Affichage
+        console.log("Nom du produit: " + productName);
+        console.log("Prix du produit: " + totalPrice + "€");
+
+        // Conditions
+        if(totalPrice <= availableMoney){
+            console.log("Vous venez d'acheter ce produit");
+            availableMoney = availableMoney - totalPrice;
+            console.log("Il vous reste " + availableMoney + "€ disponibles");
+        } else {
+            console.log("Vous n'avez pas assez d'argent pour acheter ce produit");
+        }
+    </script>
+</body>
+</html>
